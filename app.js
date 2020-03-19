@@ -61,25 +61,27 @@ app.get("/packages", (req, res)=>{
 		//const packagesDb = '';
 		conn.query(sql, (err, packagesDb, fields)=>{
 		//	if (err) throw err;
-			console.log(packagesDb);
+			// console.log(packagesDb);
 
-			let content = ' `';
+			let content = '';
 
 			// Loop through each element in the packages and append to content
 			// Note: I've attached url link to the image rather than as a separate link
 			packagesDb.forEach(function(package){
+				let imgUrl = "/images/" + package.PkgImage + ".jpg";
+				let startDate = package.PkgStartDate.getFullYear() + "/" + (package.PkgStartDate.getMonth() + 1) + "/" + package.PkgStartDate.getDate();
+				let endDate = package.PkgEndDate.getFullYear() + "/" + (package.PkgEndDate.getMonth() + 1) + "/" + package.PkgEndDate.getDate();
+				
+				console.log(startDate)
 
-				content +=  
-				`<article>
-	<h2 class="center header-blue"> ${package.PkgName} </h2>
-	<p class="packages center">Dates: ${package.PkgStartDate} - ${package.PkgEndDate}</p>
-	<p class="packages center">Price: ${package.PkgBasePrice} </p>
-	<img class="package-img shadow2" src="https://picsum.photos/id/1019/300/300" alt="Destination: ${package.PkgName}">
-</article>`	
+				content +=  `div style = "display: none"><div>
+										<h2 class="center header-blue"> ${package.PkgName} </h2>
+										<p class="packages center">Dates: ${startDate} to ${endDate}</p>
+										<p class="packages center">Price: $${package.PkgBasePrice} </p>
+										<img class="package-img shadow2" src= ${imgUrl} alt="Destination: ${package.PkgName}" width=200 height=200></div></div`	
 			});
-
-
-				console.log(content);
+			  
+				// console.log(content);
 				res.render('packages', { pugPackages : content });
 				
 				conn.end((err)=>{

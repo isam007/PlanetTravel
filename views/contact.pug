@@ -32,33 +32,33 @@ block head
         li
           a(class= cActive href='contact') Contact
 
-  block content
-    h2.full-width.center.header-blue.text-shadow.large-font Our Experts:
-    main
-      
-    form(action="/submitted" method="post")
-      h2.full-width.center.blue-color Contact Us:
-      label(for="CustFirstName")
-        | First Name 
-        span.red-color *
-      input#fname(type="text" name="CustFirstName" placeholder="Enter your first name" required="")
+block content
+  h2.full-width.center.header-blue.text-shadow.large-font Our Experts:
+  main
     
-      label(for="CustLastName")
-        | Last Name 
-        span.red-color *
-      input#lname(type="text" name="CustLastName" placeholder="Enter your full name" required="")
-      label(for="CustEmail")
-        | Email 
-        span.red-color *
-      input#email(type="email" name="CustEmail" placeholder="Enter your email" required="")
-      label(for="message")
-        | Message 
-      textarea#message(name="message" placeholder="Enter your message")
-      input.full-width.button(type="submit" name="submit" value="Send")
+  form(action="/submitted" method="post")
+    h2.full-width.center.blue-color Contact Us:
+    label(for="CustFirstName")
+      | First Name 
+      span.red-color *
+    input#fname(type="text" name="CustFirstName" placeholder="Enter your first name" required="")
+  
+    label(for="CustLastName")
+      | Last Name 
+      span.red-color *
+    input#lname(type="text" name="CustLastName" placeholder="Enter your full name" required="")
+    label(for="CustEmail")
+      | Email 
+      span.red-color *
+    input#email(type="email" name="CustEmail" placeholder="Enter your email" required="")
+    label(for="message")
+      | Message 
+    textarea#message(name="message" placeholder="Enter your message")
+    input.full-width.button(type="submit" name="submit" value="Send")
 
 
-    block javascript
-      script(src='js/experts.js')
+  block javascript
+    script(src='js/experts.js')
 
 
   

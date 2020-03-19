@@ -697,6 +697,7 @@ CREATE TABLE `packages` (
   `PkgEndDate` datetime DEFAULT NULL,
   `PkgDesc` varchar(50) DEFAULT NULL,
   `PkgBasePrice` decimal(19,4) NOT NULL,
+  `PkgImage` varchar(50) NOT NULL,
   `PkgAgencyCommission` decimal(19,4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -708,11 +709,11 @@ CREATE TABLE `packages` (
 -- Dumping data for table `packages`
 --
 
-INSERT INTO `packages` (`PackageId`, `PkgName`, `PkgStartDate`, `PkgEndDate`, `PkgDesc`, `PkgBasePrice`, `PkgAgencyCommission`) VALUES
-(1, 'Caribbean New Year', '2017-12-25 00:00:00', '2017-01-04 00:00:00', 'Cruise the Caribbean & Celebrate the New Year.', '4800.0000', '400.0000'),
-(2, 'Polynesian Paradise', '2016-12-12 00:00:00', '2016-12-20 00:00:00', '8 Day All Inclusive Hawaiian Vacation', '3000.0000', '310.0000'),
-(3, 'Asian Expedition', '2016-05-14 00:00:00', '2016-05-28 00:00:00', 'Airfaire, Hotel and Eco Tour.', '2800.0000', '300.0000'),
-(4, 'European Vacation', '2016-11-01 00:00:00', '2016-11-14 00:00:00', 'Euro Tour with Rail Pass and Travel Insurance', '3000.0000', '280.0000');
+INSERT INTO `packages` (`PackageId`, `PkgName`, `PkgStartDate`, `PkgEndDate`, `PkgDesc`, `PkgBasePrice`, `PkgImage`, `PkgAgencyCommission`) VALUES
+(1, 'Caribbean New Year', '2017-12-25 00:00:00', '2017-01-04 00:00:00', 'Cruise the Caribbean & Celebrate the New Year.', '4800.0000', 'caribbean', '400.0000'),
+(2, 'Polynesian Paradise', '2016-12-12 00:00:00', '2016-12-20 00:00:00', '8 Day All Inclusive Hawaiian Vacation', '3000.0000', 'polynesia', '310.0000'),
+(3, 'Asian Expedition', '2016-05-14 00:00:00', '2016-05-28 00:00:00', 'Airfaire, Hotel and Eco Tour.', '2800.0000', 'asia', '300.0000'),
+(4, 'European Vacation', '2016-11-01 00:00:00', '2016-11-14 00:00:00', 'Euro Tour with Rail Pass and Travel Insurance', '3000.0000', 'europe','280.0000');
 
 -- --------------------------------------------------------
 

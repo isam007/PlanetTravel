@@ -3,7 +3,11 @@ block variables
   - let pActive = 'active'
 
 block page-styles
-   
+   style.
+    img {
+    object-fit: cover;
+    margin: auto;
+    }
 
 block head
   block navbar
@@ -19,11 +23,12 @@ block head
         li
           a(class= cActive href='contact') Contact
 
-  block content
-    h2.full-width.center.header-blue.text-shadow.large-font Select the trip of your dream!
-
-    main 
-      #{pugPackages}
+block content
+  h2.full-width.center.header-blue.text-shadow.large-font Select the trip of your dream!
+  main
+    #{pugPackages}
+  //main 
+    
       //- block javascript
       //-   script(src='js/packages.js')
 
