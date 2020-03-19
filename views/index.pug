@@ -1,0 +1,17 @@
+extends template
+block variables
+  - let iActive = 'active' 
+
+block text
+  .text.text-shadow
+    h1 #{pageGreeting}
+    h1 Travel with experts!
+
+block content
+  h2.full-width.center.blue-color Our Packages:  
+  main#packages
+  
+block javascript
+  // Java Script
+  script(src='js/packages.js')
+

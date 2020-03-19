@@ -1,0 +1,46 @@
+/*   Planet Travel Agency website 
+		 author: Irada Shamilova
+		 date: February 24, 2020 
+		 course module: Winter 2020 - Web Application Development (CPRG-210-XM5)
+		 assignment: Individual assignment */
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  text-decoration: none
+}
+
+/* Font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+li a{
+  font-size: large;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+main {
+  justify-content: space-around;
+}
+
+/* Form */
+form {
+  border: none;
+  max-width: 80ch;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding: 1em;
+ 
+}
+

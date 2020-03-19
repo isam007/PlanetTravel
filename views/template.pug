@@ -1,0 +1,58 @@
+block variables
+
+doctype html
+//- Planet Travel Agency website
+//- author: Irada Shamilova
+//- date: March 9, 2020
+//- course module: Winter 2020 - Web Application Development (CPRG-210-XM5)
+//- assignment: Individual assignment - back end  
+
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Planet Travel
+    
+    // template block for additional css files if needed later
+    block css-styles
+      link(href='css/normalize.css', rel='stylesheet')
+      link(href='css/main.css', rel='stylesheet')
+
+    // template block for on-page css styles
+    block page-styles 
+
+  // Hero page here with logo, navigation bar and welcome message  
+  body
+
+    // block for header - only used on Home page because fo hero image
+
+    block head
+      header
+
+        // block for navigatikon bar - used in all pages
+        block navbar
+          nav
+            .logo-image
+              a(href='index')
+                img.shadow1(src='images/logo3.png', alt='Planet Travel')
+            ul
+              li
+                a(class= iActive href='index') Home
+              li
+                a(class= pActive href='packages') Packages
+              li
+                a(class= cActive href='contact') Contact
+
+        // block for hero image text  
+        block text
+
+      // block for main content
+      block content
+
+      // block for footer
+      block foot
+        footer
+          p © 2020 Planet Travel
+      
+      // block for java script
+      block javascript

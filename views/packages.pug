@@ -1,0 +1,31 @@
+extends template
+block variables
+  - let pActive = 'active'
+
+block page-styles
+   
+
+block head
+  block navbar
+    nav.navbar
+      .logo-image
+        a(href='index')
+          img.shadow1(src='images/logo3.png', alt='Planet Travel')
+      ul
+        li
+          a(class= iActive href='index') Home
+        li
+          a(class= pActive href='packages') Packages
+        li
+          a(class= cActive href='contact') Contact
+
+  block content
+    h2.full-width.center.header-blue.text-shadow.large-font Select the trip of your dream!
+
+    main 
+      #{pugPackages}
+      //- block javascript
+      //-   script(src='js/packages.js')
+
+
+  
